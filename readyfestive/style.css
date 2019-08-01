@@ -287,12 +287,13 @@ table tbody h2 {
   letter-spacing: normal; }
 
 body {
-  font-size: 18px; }
+  font-size: 14px; }
 
 body, button, input, textarea {
-  font-family: 'Lato','Helvetica',Arial,sans-serif;
+	font-family:'montserrat';
+	/*font-family: 'Lato','Helvetica',Arial,sans-serif;*/
   color: #60636d;
-  line-height: 1.618;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   font-weight: 400; }
 
@@ -301,7 +302,7 @@ select {
 
 h1, h2, h3, h4, h5, h6 {
   display: block;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0 0 0.53em;
   color: #252423; }
 
@@ -538,7 +539,8 @@ input[type="submit"],
   border-style: solid;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Lato',sans-serif;
+  font-family: 'montserrat',sans-serif;
+  /*font-family: 'Lato',sans-serif;*/
   letter-spacing: 2px;
   font-size: 16px;
   font-weight: 600;
@@ -1565,13 +1567,15 @@ button.menu-toggle:after {
   font-style: normal; }
 
 h1, h2, h3 {
-  font-family: 'Lato','Helvetica',Arial,sans-serif;
+  font-family: 'Montserrat';
+  /*font-family: 'Lato','Helvetica',Arial,sans-serif;*/
   text-transform: uppercase;
   font-weight: 300;
   -webkit-font-smoothing: antialiased; }
 
 .main-navigation ul.menu > li > a {
-  font-family: 'Lato','Helvetica',Arial,sans-serif;
+  font-family: 'Montserrat';
+  /*font-family: 'Lato','Helvetica',Arial,sans-serif;*/
   text-transform: uppercase;
   font-size: 0.95em;
   letter-spacing: 3px; }
@@ -1671,14 +1675,11 @@ table tbody tr:nth-child(2n) td {
 #comments .comment-list .comment-content .comment-text {
   background-color: #cc9749; }
 
+#order_review {
+  background-color: #fff; }
+
 #payment .payment_methods li {
-    padding: 15px 20px 0px;
-    background-color: #fff;
-    border-bottom: 1px solid #eeeeee;
-}
-.payment_box.payment_method_braintree_paypal_payments {
-    display: none;
-}
+  background-color: #fafafa; }
 
 #payment .payment_methods li:hover {
   background-color: #f5f5f5; }
@@ -2190,8 +2191,9 @@ h2.section-title {
   left: -2px; }
 
 h2 em {
+  /*font-family: 'Roboto Condensed', sans-serif;*/
   font-family: 'daniela_script_boldregular','Lato',sans-serif;
-  font-size: 80px;
+  font-size: 60px;
   text-transform: lowercase;
   margin-top: -40px; }
 
@@ -2201,7 +2203,7 @@ h2 em {
 .newhome #intro {
   padding-bottom: 10px;
   margin-bottom: 40px;
-  background: #bfbeba; }
+  background: #F4CEB0; }
 
 .newhome #intro h2 {
   font-size: 50px;
@@ -2475,21 +2477,22 @@ h2 em {
   color: #9e9e9a; }
 
 .site-footer {
-  background-color: #9e9e9a;
-  color: #fff; }
+  background-color: #FEF5F1;
+  color: #3B3940; }
 
 .site-footer a:not(.button) {
-  color: #fff; }
+  color: #3B3940; }
 
 .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
-  color: #fff; }
+  color: #3B3940; }
 
 .site-footer h4 {
-  font-family: 'Lato','Helvetica',Arial,sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato','Helvetica',Arial,sans-serif;*/
   letter-spacing: 1.4px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #3B3940;
   padding-bottom: 10px;
-  font-size: 17px;
+  font-size: 14px;
   margin-bottom: 15px; }
 
 .site-footer .subscribe-and-connect-connect li {
@@ -2497,9 +2500,9 @@ h2 em {
 
 .site-footer .widget_product_search form input[type=search], .site-footer .widget_product_search form input[type=text], .site-footer .widget_search form input[type=search], .site-footer .widget_search form input[type=text] {
   background: none;
-  border-color: #fff;
-  border: 2px solid #9e9e9a;
-  color: #fff; }
+  border-color: #3B3940;
+  border: 1px solid #9e9e9a;
+  color: #3B3940; }
 
 /** ==========================================================================
 	SHOP 
@@ -2856,14 +2859,6 @@ a.wpfai-link {
 
 .product-addon-totals dd:first-of-type .subscription-details {
   display: none; }
-
-tr.order-total th
-{
-	width: 56%;
-}
-.sub-custom {
-    width: 90%;
-}
 
 @media (min-width: 480px) and (max-width: 767px) {
   ul.products li.product {
@@ -3359,112 +3354,8 @@ h3.step b {
 		margin-right:2%;
 	}*/ }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  ul.bundled_products li.product.first {
-    clear: none !important; }
-  ul.bundled_products li.product.last {
-    margin-right: 2% !important; }
-  ul.bundled_products li.product:nth-of-type(3n + 1) {
-    clear: both !important; } }
 
-@media (min-width: 992px) {
-  ul.bundled_products li.bundled_product {
-    width: 23.4%; }
-  /*
-	.bundle_form div.bundled_product_summary {
-		width:31.3333%;
-	}*/ }
-
-/** ==========================================================================
-	CART / CHECKOUT 
-=========================================================================== **/
-/*
-.shop_table .recurring-total.shipping,
-.shop_table .recurring-total.cart-subtotal {display:none}
-*/
-/*
-.bundle_table_item .product-total,
-.bundle_table_item .product-subtotal {visibility:hidden}
-*/
-.bundled_table_item td.product-name dl.variation, .bundled_table_item td.product-name dl.variation dd {
-  margin: 0; }
-
-.woocommerce-checkout-review-order-table td {
-  background: #fffefe; }
-
-.woocommerce-checkout-review-order-table .shipping.recurring-total td {
-  background: #fcf7f3; }
-
-/*
-// hide the subtotals for subscriptions because too dang long and confusing
-.shipping.recurring-total,
-.cart-subtotal.recurring-total {display:none} */
-#coupons_list h2 {
-  font-size: 1.4em; }
-
-.checkout .sc_info_box {
-  background: #fcf7f3;
-  width: 47.8260869565%;
-  border: 2px solid #cc9749; }
-
-.checkout .sc_info_box h3,
-.checkout .sc_info_box p {
-  text-align: center; }
-
-.checkout .sc_info_box p {
-  margin-bottom: 20px; }
-
-.checkout .sc_info_box input, .checkout .sc_info_box textarea {
-  background-color: #fff; }
-
-body.switch-checkout .woocommerce-info:first-of-type, body.switch-checkout .checkout_coupon, body.switch-checkout #coupons_list, body.switch-checkout #customer_details {
-  display: none; }
-
-.coupon-content .discount-description {
-  max-width: 250px; }
-
-/** MY ACCOUNT **/
-#update_all_subscriptions_addresses_field label {
-  padding: 20px;
-  border: 2px solid #cc9749; }
-
-
-
-
-/* Form Styling */
-.tabs > .gfield_label {
-    display: none;
-}
- 
-.tabs li {
-    float: left;
-    margin-bottom:0;
-}
- 
-.tabs [type=radio] {
-    display: none;
-}
- 
-.tabs li label {
-    margin: 0 2px 0 0;
-    padding: 10px;
-    border: 1px solid #CCC;
-    border-bottom: 0;
-    background: #CCC;
-    color: white;
-}
- 
-.gsection_title {
-    border-top: 1px solid #CCC;
-}
- 
-.tabs [type=radio]:checked ~ label {
-    background: white;
-    color: black;
-}
-
-
-
+/* CHECKOUT PAGE CSS */
 
 
 /*c h e c k o u t  p a g e*/
@@ -3549,6 +3440,12 @@ p#order_comments_field {
   border-top: 1px solid #EBEBEB;
   padding: 10px 20px;
 }
+#payment .payment_methods li
+{
+	padding: 15px 20px 0px;
+    background-color: #fff;
+    border-bottom: 1px solid #eeeeee;
+}
 #payment .payment_methods li label {
     display: block;
     padding: 0 0 10px;
@@ -3570,11 +3467,11 @@ p#order_comments_field {
 }
 #payment .payment_methods li label.control-label
 {
-	display:none;
+  display:none;
 }
 .payment_box.payment_method_braintree_payment_gateway {
     margin-top: 20px;
-	
+  
 }
 #payment .payment_methods li .payment_box {
     padding: 0 31px 18px;
@@ -3810,7 +3707,7 @@ tfoot .order-total td{
 .offers-update {
     position: absolute;
     left: 0;
-    top: 195px;
+    top: 212px;
     padding-left: 27px;
     font-size: 14px;
     line-height: 19px;
@@ -3944,128 +3841,112 @@ img.checkout-logo {
     padding-bottom: 15px;
     padding-top: 25px;
 }
-@media screen and (max-width: 940px) {
-  .product-name.ghai {
-    padding-left: 80px;
-  }
-  .img_box {
-    width: 43px;
-    height: 43px;
-  }
-  .product-quantity {
-    left: 55px;
-    top: 20px;
-  }
-  #customer_details:after {
-    right: -25px;
-  }
-  .checkout #billing_first_name_field label {
-    font-size: 15px;
-    line-height: normal;
-    margin: 0 0 19px;
-  }
-  #billing_last_name_field {
-    margin-top: 37px;
-  }
+
+#payment ul li {
+    padding: 15px 20px 0px;
+    background-color: #fff;
+    border-bottom: 1px solid #eeeeee;
 }
-@media screen and (max-width: 768px) {
-  .offers-update
-  {
-    top: 170px;
-    font-size: 13px;
-  }
-  .checkout #billing_first_name_field label
-  {
-    font-size: 13px;
-  }
-  table.shop_table.woocommerce-checkout-review-order-table
-  {
-        padding-right: 10px;
-  }
-  .order-total
-  {
-    width: 90%;
-  }
-  tr.order-total th {
-    width: 34%;
-  }
-}
-@media screen and (max-width: 767px) {
-  table.shop_table.woocommerce-checkout-review-order-table
-  {
-    padding-right:0px;
-  }  
-  .shop_table
-  {
-    background:#fff;
-  }
-  .order-total
-  {
-    width: 95%;
-    margin-left:0px;
-  }
-  tr.order-total th
-  {
-    width: 45%;
-  }
-  .checkout_coupon {
-    display: flex;
-  }
-  .checkout .form-row-last, .checkout .form-row-first, #billing_state_field, #billing_postcode_field, #shipping_state_field, #shipping_postcode_field {
-    width: 100% !important;
-    padding: 0;
-  }
-  #customer_details:after {
-    display: none;
-  }
-  .checkout_coupon .form-row-first {
-    width: calc(100% - 123px)!important;
-  }
-  .checkout_coupon .form-row-last {
-    width: auto!important;
-    margin: 0;
-  }
-  .product-quantity {
-    left: 31px;
-  }
-  .img_box {
-    width: 43px;
-    height: 43px;
-    left: 0;  
-  } 
-  .product-name.ghai {
-    padding-left: 57px;
-  }
-  table tbody tr:nth-child(2n) td {
-    padding-left: 0;
-  }
-  tfoot th {
-    background: transparent !important;
-    padding: 0em 0 4px !important;
-}
-tfoot .order-total th{
-      padding: 20px 0px 4px 0px !important;
-}
-tfoot .order-total td {
-      padding: 12px 0px 4px 0px !important;
-}
-#customer_details
-{
-  padding-right: 5px;
-  border-right: none;
-}
-.woocommerce-additional-fields.mobile-view {
-    margin-top: 100px;
-    background: #fff;
-    display: block !important;
-}
-.woocommerce-additional-fields {
+
+/* END CHECKOUT PAGE CSS */  
+
+@media (min-width: 768px) and (max-width: 991px) {
+  ul.bundled_products li.product.first {
+    clear: none !important; }
+  ul.bundled_products li.product.last {
+    margin-right: 2% !important; }
+  ul.bundled_products li.product:nth-of-type(3n + 1) {
+    clear: both !important; } }
+
+@media (min-width: 992px) {
+  ul.bundled_products li.bundled_product {
+    width: 23.4%; }
+  /*
+	.bundle_form div.bundled_product_summary {
+		width:31.3333%;
+	}*/ }
+
+/** ==========================================================================
+	CART / CHECKOUT 
+=========================================================================== **/
+/*
+.shop_table .recurring-total.shipping,
+.shop_table .recurring-total.cart-subtotal {display:none}
+*/
+/*
+.bundle_table_item .product-total,
+.bundle_table_item .product-subtotal {visibility:hidden}
+*/
+.bundled_table_item td.product-name dl.variation, .bundled_table_item td.product-name dl.variation dd {
+  margin: 0; }
+
+.woocommerce-checkout-review-order-table .shipping.recurring-total td {
+  background: #fcf7f3; }
+
+/*
+// hide the subtotals for subscriptions because too dang long and confusing
+.shipping.recurring-total,
+.cart-subtotal.recurring-total {display:none} */
+#coupons_list h2 {
+  font-size: 1.4em; }
+
+.checkout .sc_info_box {
+  background: #fcf7f3;
+  width: 47.8260869565%;
+  border: 2px solid #cc9749; }
+
+.checkout .sc_info_box h3,
+.checkout .sc_info_box p {
+  text-align: center; }
+
+.checkout .sc_info_box p {
+  margin-bottom: 20px; }
+
+.checkout .sc_info_box input, .checkout .sc_info_box textarea {
+  background-color: #fff; }
+
+body.switch-checkout .woocommerce-info:first-of-type, body.switch-checkout .checkout_coupon, body.switch-checkout #coupons_list, body.switch-checkout #customer_details {
+  display: none; }
+
+.coupon-content .discount-description {
+  max-width: 250px; }
+
+/** MY ACCOUNT **/
+#update_all_subscriptions_addresses_field label {
+  padding: 20px;
+  border: 2px solid #cc9749; }
+
+
+
+
+/* Form Styling */
+.tabs > .gfield_label {
     display: none;
 }
-#order_review:after {
-    left: 0;
+ 
+.tabs li {
+    float: left;
+    margin-bottom:0;
 }
-#billing_last_name_field {
-    margin-top: 37px;
-  }
+ 
+.tabs [type=radio] {
+    display: none;
+}
+ 
+.tabs li label {
+    margin: 0 2px 0 0;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-bottom: 0;
+    background: #CCC;
+    color: white;
+}
+ 
+.gsection_title {
+    border-top: 1px solid #CCC;
+}
+ 
+.tabs [type=radio]:checked ~ label {
+    background: white;
+    color: black;
 }

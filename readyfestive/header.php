@@ -59,7 +59,7 @@
          
         
         <div id="header-right"> 
-          
+            
             <div class="search-cart">
                  <?php if ( is_woocommerce_activated() ) {
                     if ( is_cart() ) {

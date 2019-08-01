@@ -399,7 +399,7 @@ function change_subscribe_button_on_switching(){
 add_filter( 'pre_option_woocommerce_subscriptions_order_button_text', 'change_checkout_button_on_switching' );
 function change_checkout_button_on_switching() {
 	
-	if (!is_admin) {
+	if (!is_admin()) {
 		// Find each product in the cart and add it to the $cart_ids array
 		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 			if ( isset( $cart_item['subscription_switch'] ) ) {

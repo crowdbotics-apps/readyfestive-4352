@@ -14,6 +14,31 @@ body {
 }
 .stepwizard-step a {
     display: block;
+    /*padding: 11.5px 0;
+    text-align: center;*/
+    width: 100%;
+   /* border-radius: 0;
+    height: auto;*/
+    color: #cc9749;
+    border: 1px solid #cc9749;
+    background: #fff;
+    font-size: 13px;
+    /* font-weight: 600;*/
+    text-transform: uppercase;
+    font-family: 'montserrat_mediumregular';
+    height: 63px!important;
+    line-height: normal;
+}
+.stepwizard-step a span {
+    /* font-family: 'daniela_script_boldregular','Lato',Arial,sans-serif; */
+    font-size: 14px;
+    letter-spacing: 1px;
+    /*margin: -34px 3px 33px 0;*/
+    display: block;
+    color: #cc9749;
+}
+.stepwizard-step a .tab-titel {
+    display: block;
     padding: 11.5px 0;
     text-align: center;
     width: 100%;
@@ -29,15 +54,7 @@ body {
     height: 63px!important;
     line-height: normal;
 }
-.stepwizard-step a span {
-    /* font-family: 'daniela_script_boldregular','Lato',Arial,sans-serif; */
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin: -34px 3px 33px 0;
-    display: block;
-    color: #cc9749;
-}
-.stepwizard-step a.btn-primary, .stepwizard-step a.btn-primary:active:hover, .stepwizard-step a:active:focus {
+.stepwizard-step a.btn-primary .tab-titel, .stepwizard-step a.btn-primary:active:hover .tab-titel, .stepwizard-step a:active:focus .tab-titel {
     color: #fff;
     border: 1px solid #cc9749;
     background: #cc9749;

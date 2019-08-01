@@ -1,0 +1,4 @@
+[27-Jul-2019 17:13:57 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/beecurat/public_html/wp-content/themes/readyfestive/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/beecurat/public_html/wp-content/themes/readyfestive/index.php on line 14
